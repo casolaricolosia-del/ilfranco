@@ -506,6 +506,17 @@ window.ARCHIVE = [
     ], source: "VivoModena", sourceUrl: "https://www.vivomodena.it/slide_homepage/castelfranco-rubano-unauto-e-provocano-un-incidente/", fb: true
   },
   {
+    id: "a-20260708-ex-golfa-la-villa", date: "2026-07-08", category: "Economia", archive: true, published: "2026-11-11",
+    title: "L'ex Golfa riparte con un nuovo nome: ora si chiama La Villa, tra piscina, serate ed eventi",
+    summary: "La stagione è cominciata il 1° giugno con la piscina. Il progetto prevede anche un bed & breakfast, campi da tennis e un ristorante, atteso entro l'inverno.",
+    body: [
+      "La Golfa, il locale di Castelfranco Emilia frequentato per oltre trent'anni da generazioni di ragazzi e famiglie, ha riaperto con un nuovo nome: La Villa. A guidare il progetto è l'imprenditore modenese Antonio Casolari Colosi, già attivo nel settore degli eventi e dell'accoglienza.",
+      "La stagione è partita il 1° giugno con l'apertura della piscina. Sabato 6 giugno è stata la volta della prima serata, pensata per una capienza fino a 1.500 persone, con ospiti i creator Luca Bellei e Il Rosso.",
+      "Il piano non si ferma al locale serale. Sono previsti la ristrutturazione completa della struttura, un bed & breakfast, aree sportive con campi da tennis e spazi per il benessere. I lavori nella zona ristorante sono in corso e dovrebbero concludersi entro l'inverno.",
+      "Casolari Colosi ha spiegato di voler restituire alla città un luogo che funzioni in momenti diversi della giornata e dell'anno: piscina e aperitivi d'estate, feste private, compleanni, concerti e serate musicali, in un ambiente che definisce sicuro per i più giovani e adatto anche alle famiglie."
+    ], source: "SulPanaro Expo", sourceUrl: "https://www.sulpanaroexpo.net/2026/07/antonio-casolari-colosi-partito-il-progetto-per-far-rinascere-la-storica-golfa-a-castelfranco-emilia/", fb: true
+  },
+  {
     id: "a-20260706-case-smeraldo-accessi", date: "2026-07-06", category: "Comune", archive: true, published: "2026-11-11",
     title: "Nuovi cassonetti, oltre 2.600 accessi alle Case Smeraldo: sportelli aperti fino al 25 luglio",
     summary: "Entro fine mese tutte le 250 isole ecologiche avranno i contenitori che si aprono con la tessera; la pulizia attorno ai cassonetti si fa anche la domenica.",
