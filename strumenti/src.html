@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Franco</title>
+<meta name="description" content="Il Franco: le notizie di Castelfranco Emilia e delle frazioni. Cronaca, Comune, eventi, sport e salute, ogni giorno.">
+<meta property="og:site_name" content="Il Franco">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Il Franco – Notizie da Castelfranco Emilia">
+<meta property="og:description" content="Le notizie di Castelfranco Emilia e delle frazioni, ogni giorno.">
+<meta property="og:locale" content="it_IT">
+<script type="application/ld+json" id="ld-org">{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"Il Franco","description":"Sito di informazione locale su Castelfranco Emilia (MO)","areaServed":"Castelfranco Emilia","inLanguage":"it","sameAs":["https://www.facebook.com/profile.php?id=61596625792838"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+<style>
+/* Layout istituzionale e minimale: barra di servizio, testata con logo, sezioni, apertura + ultime, righe con filetti, piè di pagina a colonne. */
+:root{
+  --paper:#ffffff; --band:#f5f5f3; --ink:#111111; --muted:#62676c; --line:#dcdcdc; --rule:#111111;
+  --accent:#b3121d;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--paper:#121212;--band:#1b1b1b;--ink:#ececec;--muted:#9a9fa4;--line:#303030;--rule:#ececec;--accent:#ff6b70;color-scheme:dark}
+}
+:root[data-theme="dark"]{--paper:#121212;--band:#1b1b1b;--ink:#ececec;--muted:#9a9fa4;--line:#303030;--rule:#ececec;--accent:#ff6b70;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.util{background:var(--band);border-bottom:1px solid var(--line);font:400 12.5px var(--sans);color:var(--muted)}
+.util .wrap{display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:space-between;padding-top:7px;padding-bottom:7px}
+.util nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+.util a:hover,.foot a:hover{color:var(--ink);text-decoration:underline}
+#today{text-transform:capitalize}
+.mast{text-align:center;padding:26px 0 18px}
+.logo{display:inline-flex;align-items:center;gap:14px;text-align:left}
+.logo svg{height:clamp(46px,8vw,66px);width:auto;flex:none}
+.logo span{display:flex;flex-direction:column;gap:4px}
+.logo small{font:600 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.mast h1{font-weight:700;font-size:clamp(38px,7vw,62px);line-height:.95;margin:0;letter-spacing:-.01em}
+nav.cats{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:9px 0;margin-bottom:22px}
+nav.cats button{font:600 13px var(--sans);letter-spacing:.06em;text-transform:uppercase;background:none;border:0;color:var(--ink);padding:4px 0;cursor:pointer;border-bottom:2px solid transparent}
+nav.cats button[aria-pressed="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.eyebrow{font:600 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.meta{font:400 13px var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+.meta a,.prose a{text-decoration:underline}
+.top{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:32px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.lead{display:flex;flex-direction:column;gap:10px}
+.lead h2{font-weight:700;font-size:clamp(30px,4.6vw,46px);line-height:1.06;margin:0;text-wrap:balance}
+.lead p{margin:0;font-size:20px;color:var(--muted)}
+.side{border-left:1px solid var(--line);padding-left:28px;display:flex;flex-direction:column}
+.side h3{font:600 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;color:var(--muted)}
+.item{display:flex;flex-direction:column;gap:4px;padding:14px 0;border-bottom:1px solid var(--line)}
+.side .item:last-of-type{border-bottom:0}
+.item h2{font-weight:600;font-size:21px;line-height:1.18;margin:0;text-wrap:balance}
+.item p{margin:0;font-size:16px;color:var(--muted)}
+.rows{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:0 32px;padding-top:8px}
+a:hover h2{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+@media (max-width:760px){.top{grid-template-columns:1fr}.side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}}
+.cover{aspect-ratio:16/9;background:hsl(var(--h) 22% 90%);position:relative;overflow:hidden;margin-top:6px}
+.cover::after{content:attr(data-letter);position:absolute;right:14px;bottom:-22px;font:700 150px/1 var(--serif);color:hsl(var(--h) 30% 62%);opacity:.55}
+:root[data-theme="dark"] .cover{background:hsl(var(--h) 18% 20%)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cover{background:hsl(var(--h) 18% 20%)}}
+/* Spazi pubblicitari: pochi, sempre etichettati */
+.ad{display:flex;flex-direction:column;align-items:center;gap:6px;border:1px dashed var(--line);background:var(--band);padding:14px 16px;text-align:center;margin:22px 0}
+.ad small{font:600 10.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ad b{font:600 17px var(--sans)}
+.ad span{font:400 14px var(--sans);color:var(--muted)}
+.ad:hover b{color:var(--accent)}
+.side .ad{margin:16px 0 0}
+article.full,.prose{max-width:680px;margin:0 auto}
+article.full{display:flex;flex-direction:column;gap:12px}
+article.full h2,.prose h2{font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.07;margin:0;text-wrap:balance}
+article.full .sum{font-size:22px;color:var(--muted);margin:0}
+article.full .body p{margin:0 0 16px;font-size:20px;line-height:1.6}
+article.full .body{border-top:1px solid var(--line);padding-top:18px;margin-top:6px}
+.prose h3{font:600 14px var(--sans);letter-spacing:.06em;text-transform:uppercase;margin:28px 0 6px}
+.prose p,.prose li{font-size:18px;line-height:1.6}
+.prose p{margin:0 0 12px}
+.prose ul{margin:0 0 12px;padding-left:22px}
+.prose mark{background:none;color:var(--accent);font-weight:600}
+.back{font:600 13px var(--sans);letter-spacing:.04em;color:var(--muted);display:inline-block;margin-bottom:10px}
+.empty{padding:40px 0;color:var(--muted);text-align:center}
+.foot{background:var(--band);border-top:3px solid var(--rule);margin-top:56px;font:400 14px/1.6 var(--sans);color:var(--muted)}
+.foot .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px 32px;padding-top:28px;padding-bottom:20px}
+.foot h4{font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin:0 0 8px}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot strong{font:700 22px var(--serif);color:var(--ink)}
+.foot .legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:14px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="util"><div class="wrap">
+  <span id="today"></span>
+  <nav aria-label="Servizio"><a href="#chi-siamo">Chi siamo</a><a href="#contatti">Contatti</a><a href="#pubblicita">Pubblicità</a></nav>
+</div></div>
+<div class="wrap">
+  <header class="mast">
+    <a class="logo" href="#home" aria-label="Il Franco, prima pagina">
+      <svg viewBox="0 0 68 76" aria-hidden="true"><path d="M0 76V0h14v12h13V0h14v12h13V0h14v76Z" fill="var(--accent)"/><text x="34" y="64" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-weight="700" font-size="52" fill="var(--paper)">F</text></svg>
+      <span><h1>Il Franco</h1><small>Notizie da Castelfranco Emilia</small></span>
+    </a>
+  </header>
+  <main id="app"></main>
+</div>
+<footer class="foot"><div class="wrap">
+  <div><strong>Il Franco</strong><p>Le notizie di Castelfranco Emilia e delle frazioni: cronaca, Comune, eventi, sport e salute.</p></div>
+  <div><h4>Il sito</h4><ul><li><a href="#home">Prima pagina</a></li><li><a href="#archivio">Archivio</a></li><li><a href="#chi-siamo">Chi siamo</a></li><li><a href="#contatti">Contatti e segnalazioni</a></li><li><a href="#pubblicita">Pubblicità</a></li></ul></div>
+  <div><h4>Informazioni legali</h4><ul><li><a href="#privacy">Privacy</a></li><li><a href="#cookie-policy">Cookie</a></li><li><a href="#rettifiche">Rettifiche e rimozioni</a></li></ul></div>
+  <div><h4>Seguici</h4><ul><li><a href="https://www.facebook.com/profile.php?id=61596625792838" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+  <p class="legal">© <span id="year"></span> Il Franco. Sito di informazione locale. I testi sono originali; la riproduzione è consentita citando la fonte.</p>
+</div></footer>
+<script src="articles.js"></script>
+<script src="archive.js"></script>
+<script>
+(function(){
+  var HUES={Cronaca:4,Comune:222,Eventi:286,Sport:150,Salute:176,Economia:32,Scuola:255};
+  var all=(window.ARTICLES||[]).concat(window.ARCHIVE||[]).sort(function(a,b){return (b.date+(b.time||"")).localeCompare(a.date+(a.time||""));});
+  var app=document.getElementById("app"), filter="Tutte";
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function safeUrl(u){return /^https?:\/\//i.test(u||"")?u:"#home";}
+  function fmt(d){var p=String(d).split("-");var m=["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];return p.length===3?(+p[2])+" "+m[+p[1]-1]+" "+p[0]:d;}
+  function cover(a){var h=HUES[a.category]==null?210:HUES[a.category];return '<div class="cover" style="--h:'+h+'" data-letter="'+esc((a.category||"N").charAt(0))+'"></div>';}
+  function item(a,withSum){return '<a class="item" href="#'+esc(a.id)+'"><span class="eyebrow">'+esc(a.category||"Notizie")+'</span><h2>'+esc(a.title)+'</h2>'+(withSum?'<p>'+esc(a.summary)+'</p>':'')+'<span class="meta">'+esc(fmt(a.date))+'</span></a>';}
+  function ad(text){return '<a class="ad" href="#pubblicita"><small>Spazio pubblicitario</small><b>'+text+'</b><span>Scopri come comparire su Il Franco</span></a>';}
+
+  var PAGES={
+   "chi-siamo":["Chi siamo",
+    '<p>Il Franco è un sito di informazione locale dedicato a Castelfranco Emilia e alle sue frazioni: Piumazzo, Manzolino, Gaggio, Panzano, Cavazzona, Recovato, Riolo e Rastellino.</p>'+
+    '<p>Ogni giorno raccontiamo quello che succede in città: cronaca, decisioni del Comune, lavori pubblici, eventi, sport e salute. Il nome viene dalla nostra città e dice anche come vogliamo scrivere: in modo chiaro e diretto.</p>'+
+    '<h3>Come lavoriamo</h3>'+
+    '<ul><li>Partiamo dai fatti: comunicati di enti, forze dell\'ordine, associazioni e organizzatori, e notizie confermate da più fonti.</li>'+
+    '<li>Ogni articolo è scritto in forma originale. Quando una notizia arriva da una sola testata, la citiamo.</li>'+
+    '<li>Nella cronaca non pubblichiamo i nomi di persone indagate o arrestate, delle vittime e dei minori.</li>'+
+    '<li>Gli articoli sono redatti con il supporto di strumenti di intelligenza artificiale, a partire da fonti verificate.</li>'+
+    '<li>Se sbagliamo, correggiamo: le rettifiche si chiedono dalla pagina <a href="#rettifiche">Rettifiche e rimozioni</a>.</li></ul>'],
+   "contatti":["Contatti e segnalazioni",
+    '<p>Hai visto qualcosa, vuoi segnalare un evento, un disservizio o una notizia dalla tua frazione? Scrivici.</p>'+
+    '<ul><li>Messaggio privato alla <a href="https://www.facebook.com/profile.php?id=61596625792838" target="_blank" rel="noopener">pagina Facebook de Il Franco</a></li></ul>'+
+    '<p>Per le segnalazioni indica sempre dove e quando è successo. Foto e video sono utili, ma inviali solo se sono tuoi.</p>'+
+    '<p>Per comunicati stampa di enti, associazioni e società sportive valgono gli stessi contatti.</p>'],
+   "pubblicita":["Pubblicità",
+    '<p>Il Franco ospita pochi spazi pubblicitari, sempre riconoscibili e separati dalle notizie. Sono pensati per negozi, locali, professionisti e aziende di Castelfranco Emilia e dintorni.</p>'+
+    '<h3>Spazi disponibili</h3>'+
+    '<ul><li>Fascia in prima pagina, sotto le sezioni</li><li>Riquadro accanto alle ultime notizie</li><li>Riquadro in fondo agli articoli</li><li>Articolo sponsorizzato, pubblicato con la dicitura “Contenuto sponsorizzato”</li></ul>'+
+    '<h3>Come prenotare</h3><p>Scrivici dalla pagina <a href="#contatti">Contatti</a> indicando l\'attività e il periodo che ti interessa.</p>'+
+    '<p>Non pubblichiamo annunci ingannevoli, di gioco d\'azzardo o che imitano le notizie.</p>'],
+   "rettifiche":["Rettifiche e rimozioni",
+    '<p>Se un articolo contiene un errore o ti riguarda in modo non corretto, puoi chiedere la rettifica, l\'aggiornamento o la rimozione.</p>'+
+    '<p>Scrivici dai <a href="#contatti">Contatti</a> indicando il titolo dell\'articolo, il punto contestato e, se possibile, un documento che lo dimostri. Rispondiamo nel più breve tempo possibile.</p>'+
+    '<p>Aggiorniamo gli articoli di cronaca giudiziaria quando ci vengono comunicati gli esiti dei procedimenti, come archiviazioni o assoluzioni.</p>'],
+   "privacy":["Informativa sulla privacy",
+    '<p>Questa pagina spiega come vengono trattati i dati personali di chi visita Il Franco, ai sensi del Regolamento (UE) 2016/679 (GDPR).</p>'+
+    '<h3>Titolare del trattamento</h3><p>Il titolare del trattamento è l\'editore de Il Franco, raggiungibile dalla pagina <a href="#contatti">Contatti</a>.</p>'+
+    '<h3>Quali dati trattiamo</h3>'+
+    '<ul><li><strong>Navigazione.</strong> Il sito non richiede registrazione e non ha moduli da compilare. I dati tecnici di connessione, come indirizzo IP, tipo di browser e orario, sono trattati dal fornitore che ospita le pagine, per farle funzionare e proteggerle.</li>'+
+    '<li><strong>Messaggi e segnalazioni.</strong> Se ci scrivi per email o sui social, usiamo il tuo nome, il tuo contatto e il contenuto del messaggio solo per risponderti e per verificare la notizia.</li>'+
+    '<li><strong>Persone citate negli articoli.</strong> I dati contenuti nelle notizie sono trattati per finalità giornalistiche, nel rispetto dell\'essenzialità dell\'informazione.</li></ul>'+
+    '<h3>Base giuridica e conservazione</h3><p>Trattiamo i dati dei messaggi sulla base della tua richiesta e del nostro legittimo interesse a rispondere; li conserviamo per il tempo necessario a gestirla. Non vendiamo dati e non facciamo profilazione.</p>'+
+    '<h3>A chi sono comunicati</h3><p>Ai fornitori tecnici che ospitano il sito e gestiscono la posta, che agiscono come responsabili del trattamento. Le pagine social sono gestite sulle piattaforme dei rispettivi fornitori, che applicano le proprie informative.</p>'+
+    '<h3>I tuoi diritti</h3><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione e opposizione al trattamento scrivendo al titolare. Puoi anche presentare reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).</p>'+
+    '<p class="meta">Ultimo aggiornamento: 10 novembre 2026.</p>'],
+   "cookie-policy":["Cookie",
+    '<p>Il Franco non usa cookie di profilazione, non usa strumenti di statistica e non inserisce tracciatori di terze parti. Per questo all\'apertura del sito non compare alcun banner di consenso.</p>'+
+    '<h3>Cosa può essere salvato</h3><p>Possono essere usati solo cookie tecnici, necessari al funzionamento delle pagine e alla sicurezza, impostati dal fornitore che ospita il sito. Per questi cookie la legge non richiede il consenso.</p>'+
+    '<h3>Caratteri tipografici</h3><p>I caratteri del sito sono caricati da Google Fonts: il tuo browser si collega ai server di Google, che ricevono il tuo indirizzo IP.</p>'+
+    '<h3>Collegamenti esterni</h3><p>Gli articoli e le pagine possono rimandare a siti esterni e ai social: quando li apri valgono le regole di quei siti.</p>'+
+    '<h3>Se cambierà qualcosa</h3><p>Se in futuro verranno aggiunti annunci di circuiti pubblicitari o strumenti di statistica, questa pagina sarà aggiornata e ti verrà chiesto il consenso prima di attivarli.</p>'+
+    '<p class="meta">Ultimo aggiornamento: 10 novembre 2026.</p>']
+  };
+
+  function setHead(title,desc){document.title=title?title+" | Il Franco":"Il Franco";var m=document.querySelector('meta[name="description"]');if(m&&desc)m.setAttribute("content",desc);var old=document.getElementById("ld-art");if(old)old.remove();}
+  function home(){
+    setHead("","Il Franco: le notizie di Castelfranco Emilia e delle frazioni. Cronaca, Comune, eventi, sport e salute, ogni giorno.");
+    var cats=["Tutte"];all.forEach(function(a){if(a.category&&cats.indexOf(a.category)<0)cats.push(a.category);});
+    var list=all.filter(function(a){return filter==="Tutte"||a.category===filter;});
+    var h='<nav class="cats" aria-label="Sezioni">'+cats.map(function(c){return '<button type="button" data-cat="'+esc(c)+'" aria-pressed="'+(c===filter)+'">'+esc(c)+'</button>';}).join("")+'</nav>';
+    if(!list.length){h+='<p class="empty">Nessun articolo pubblicato per ora.</p>';}
+    else{
+      var l=list[0], side=list.slice(1,5), rest=list.slice(5,17);
+      h+='<section class="top"><a class="lead" href="#'+esc(l.id)+'"><span class="eyebrow">'+esc(l.category||"Notizie")+'</span><h2>'+esc(l.title)+'</h2><p>'+esc(l.summary)+'</p><span class="meta">'+esc(fmt(l.date))+'</span>'+cover(l)+'</a>'+
+         '<aside class="side"><h3>Ultime notizie</h3>'+(side.length?side.map(function(a){return item(a,false);}).join(""):'<p class="meta">Le prossime notizie arrivano in giornata.</p>')+ad("Questo spazio è libero")+'</aside></section>';
+      h+=ad("La tua attività, davanti ai lettori di Castelfranco");
+      if(rest.length)h+='<section class="rows">'+rest.map(function(a){return item(a,true);}).join("")+'</section>';
+      h+='<p style="text-align:center;margin:26px 0 0"><a class="back" href="#archivio">Tutte le notizie in archivio ('+all.length+') →</a></p>';
+    }
+    app.innerHTML=h;
+  }
+  function article(a){
+    setHead(a.title,a.summary);
+    var ld=document.createElement("script");ld.type="application/ld+json";ld.id="ld-art";
+    ld.textContent=JSON.stringify({"@context":"https://schema.org","@type":"NewsArticle","headline":a.title,"description":a.summary,"datePublished":(a.published||a.date)+"T"+(a.time||"08:00")+":00+01:00","articleSection":a.category,"inLanguage":"it","articleBody":(a.body||[]).join("\n\n"),"author":{"@type":"Organization","name":"Il Franco"},"publisher":{"@type":"NewsMediaOrganization","name":"Il Franco"},"contentLocation":{"@type":"Place","name":"Castelfranco Emilia"}});
+    document.head.appendChild(ld);
+    var more=all.filter(function(x){return x.id!==a.id;}).slice(0,3);
+    app.innerHTML='<article class="full"><a class="back" href="#home">← Torna alla prima pagina</a>'+
+      '<span class="eyebrow">'+esc(a.category||"Notizie")+'</span>'+
+      '<h2>'+esc(a.title)+'</h2><p class="sum">'+esc(a.summary)+'</p>'+
+      '<span class="meta">Il Franco · '+(a.archive?'Archivio · fatti del '+esc(fmt(a.date)):esc(fmt(a.date))+(a.time?' · ore '+esc(a.time):''))+'</span>'+cover(a)+
+      '<div class="body">'+(a.body||[]).map(function(p){return '<p>'+esc(p)+'</p>';}).join("")+'</div>'+
+      (a.source?'<p class="meta">Fonte: <a href="'+esc(safeUrl(a.sourceUrl))+'" target="_blank" rel="noopener">'+esc(a.source)+'</a></p>':'')+
+      ad("Il tuo annuncio qui")+
+      (more.length?'<section><h3 class="eyebrow" style="color:var(--muted);margin:8px 0 0">Leggi anche</h3>'+more.map(function(x){return item(x,false);}).join("")+'</section>':'')+
+      '</article>';
+    window.scrollTo(0,0);
+  }
+  function page(k){var p=PAGES[k];setHead(p[0],p[0]+" – Il Franco, notizie da Castelfranco Emilia.");app.innerHTML='<section class="prose"><a class="back" href="#home">← Torna alla prima pagina</a><h2>'+p[0]+'</h2><div style="border-top:1px solid var(--line);margin-top:14px;padding-top:16px">'+p[1]+'</div></section>';window.scrollTo(0,0);}
+  function archive(){
+    setHead("Archivio","Tutte le notizie de Il Franco su Castelfranco Emilia, mese per mese.");
+    var M=["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"],h='<section class="prose"><a class="back" href="#home">← Torna alla prima pagina</a><h2>Archivio</h2>',cur="";
+    all.forEach(function(a){var k=String(a.date).slice(0,7);if(k!==cur){cur=k;h+='<h3>'+M[+k.slice(5)-1]+' '+k.slice(0,4)+'</h3>';}h+=item(a,false);});
+    app.innerHTML=h+'</section>';window.scrollTo(0,0);
+  }
+  function route(){
+    var id=location.hash.replace(/^#/,"");
+    if(id==="archivio")return archive();
+    if(PAGES[id])return page(id);
+    var a=all.filter(function(x){return x.id===id;})[0];
+    if(a)article(a);else home();
+  }
+  app.addEventListener("click",function(e){var b=e.target.closest("button[data-cat]");if(b){filter=b.getAttribute("data-cat");home();}});
+  window.addEventListener("hashchange",route);
+  document.getElementById("today").textContent=new Date().toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+  document.getElementById("year").textContent=new Date().getFullYear();
+  route();
+})();
+</script>
+</body>
+</html>
